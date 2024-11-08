@@ -77,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
         }.start();
     }
 
-
-
     private void moveToNextStretch(ImageView stretchImageView) {
         if (countDownTimer != null) {
             countDownTimer.cancel();
