@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             countDownTimer.cancel();
         }
 
+
         if (stretchIndex < stretches.length - 1) {
             stretchIndex++;
             stretchImageView.setImageResource(stretches[stretchIndex]);
