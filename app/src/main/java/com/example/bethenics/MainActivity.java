@@ -10,19 +10,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.EdgeToEdge;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvTimer;
     private Button btStart,btSkip, btWork, btSkill;
     private CountDownTimer countDownTimer;
-    private int stretchIndex = 0; // Index for stretches
+    private int stretchIndex = 0;
 
     private final int[] stretches = { R.drawable.sc1, R.drawable.sc2, R.drawable.sc3,R.drawable.sc4,R.drawable.sc5 };
-    private final int STRETCH_TIME = 10000; // 10 seconds in milliseconds
+    private final int STRETCH_TIME = 10000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Bind views
         tvTimer = findViewById(R.id.tvTimer);
         btStart = findViewById(R.id.btStart);
         btSkip = findViewById(R.id.btSkip);
@@ -38,20 +35,21 @@ public class MainActivity extends AppCompatActivity {
         btSkill = findViewById(R.id.btSkill);
         ImageView stretchImageView = findViewById(R.id.imvStret);
 
-        // Set initial stretch image
         stretchImageView.setImageResource(stretches[stretchIndex]);
 
-        // Skip button functionality
         btSkip.setOnClickListener(view -> {
             moveToNextStretch(stretchImageView);
 
         });
 
 
-        // Workout and Skills buttons functionality (just placeholders for now)
-        btWork.setOnClickListener(v ->  {
-            Intent intent = new Intent(this,WorkActivity.class);
-            startActivity(intent);
+
+        btWork.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WorkActivity.class);
+                startActivity(intent);
+            }
         });
 
         btSkill.setOnClickListener(view -> {
@@ -59,11 +57,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btStart.setOnClickListener(view -> {
-            // Start timer logic
             startTimer();
         });
     }
-
 
 
     private void startTimer() {
@@ -112,10 +108,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+
     }
 }

@@ -8,7 +8,7 @@ public class WorkActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_work); // Link to the XML layout
+        setContentView(R.layout.activity_work);
     }
 
 }
