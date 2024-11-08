@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffbcd9"
+    android:padding="10dp">
+
+
+    <!-- App Title -->
+
+    <!-- Subtitle -->
+
+    <!-- Stretch Image and Timer with Skip Button -->
+
+
+    <!-- Bottom Navigation Buttons -->
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="43dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="16dp"
+        android:text="BeThenics!"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSub"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="61dp"
+        android:paddingBottom="24dp"
+        android:text="Let's start with some stretching to avoid injuries!"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="119dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:text="Start "
+        app:layout_constraintBottom_toTopOf="@+id/btSkip"
+        app:layout_constraintEnd_toEndOf="@+id/imvStret"
+        app:layout_constraintStart_toStartOf="@+id/imvStret" />
+
+    <ImageView
+        android:id="@+id/imvStret"
+        android:layout_width="297dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="19dp"
+        android:contentDescription="Stretch Image"
+        android:src="@drawable/sc1"
+        app:layout_constraintBottom_toTopOf="@+id/btStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSub" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="75dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="105dp"
+        android:gravity="center"
+        android:text="10s"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btWork"
+        app:layout_constraintEnd_toStartOf="@+id/btStart"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvStret"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <Button
+        android:id="@+id/btSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="160dp"
+        android:text="Skip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toEndOf="@+id/tvTimer" />
+
+    <Button
+        android:id="@+id/btWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="52dp"
+        android:enabled="false"
+        android:text="Workout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="52dp"
+        android:enabled="false"
+        android:text="Skills"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btWork" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
